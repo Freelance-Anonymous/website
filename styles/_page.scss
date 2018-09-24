@@ -1,0 +1,28 @@
+.p {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 40px;
+
+    &__top-content {
+        margin-bottom: 50px;
+        max-width: 750px;
+    }
+
+    &__sub-heading {
+        margin-left: 15px;
+        margin-bottom: 10px;
+    }
+
+    &__footer {
+        padding: 0 15px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    .p {
+        &__top-content {
+            margin-bottom: 75px;
+        }
+    }
+}

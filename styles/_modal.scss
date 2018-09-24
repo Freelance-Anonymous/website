@@ -1,0 +1,56 @@
+.c-modal--menu {
+    $this: '.c-modal';
+
+    #{$this}__content {
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            color: $color-light;
+            text-decoration: none;
+        }
+    }
+
+    #{$this}__backdrop {
+        background: #383743;
+    }
+
+    #{$this}__content {
+        margin: 30px;
+    }
+
+    #{$this}__close {
+        position: fixed;
+        top: 40px;
+        left: 30px;
+    }
+
+    .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after {
+        background-color: $color-light;
+    }
+}
+
+.c-modal--search {
+    $this: '.c-modal';
+
+    #{$this}__backdrop {
+        background: #555461
+    }
+
+    #{$this}__content {
+        margin: 30px;
+    }
+
+    #{$this}__close {
+        position: fixed;
+        top: 40px;
+        right: 30px;
+    }
+
+    .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after {
+        background-color: $color-light;
+    }
+}

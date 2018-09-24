@@ -1,0 +1,74 @@
+@import "_mixins.scss";
+@import "_variables";
+@import "_elements.scss";
+@import "_hamburgers.scss";
+@import "_modal.scss";
+@import "_nav.scss";
+@import "_page.scss";
+@import "_global.scss";
+
+.c-card {
+    margin-bottom: 40px;
+
+    &__header {
+        text-align: center;
+    }
+
+    &__media {
+        margin-bottom: 10px;
+        text-align: center;
+
+        img {
+            line-height: 0;
+            max-width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .c-card {
+        margin-bottom: 0;
+
+        &__header {
+            text-align: left;
+        }
+    }
+
+    .l-grid {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+
+        &.is-col-2 {
+            & > * {
+                flex: 0 0 calc(50% - 30px);
+                margin: 0 15px;
+            }
+        }
+
+        &.is-col-3 {
+            & > * {
+                flex: 0 0 calc(33.333% - 30px);
+                margin: 0 15px;
+            }
+        }
+    }
+}
+
+.sr-only {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.page-enter-active, .page-leave-active {
+    transition: .4s cubic-bezier(.95,.18,.71,.7) all;
+}
+
+.page-enter, .page-leave-active {
+    opacity: 0;
+}

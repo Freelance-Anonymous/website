@@ -1,0 +1,116 @@
+body {
+    background: $color-light;
+    color: $color-dark;
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    transition: .4s cubic-bezier(.95,.18,.71,.7) background-color;
+}
+
+body.is-dark {
+    background: $color-dark;
+    color: $color-light;
+
+    .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after {
+        background-color: $color-light;
+    }
+
+    a {
+        color: $color-light;
+    }
+
+    hr {
+        border-bottom-color: #3f3f3f;
+    }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $font-family-serif;
+    font-style: italic;
+    line-height: 1.2;
+    margin: 0 0 .5rem;
+    padding: 0;
+}
+
+h1, .h1 {
+    font-size: $font-size-h1-sm;
+}
+
+h2, .h2 {
+    font-size: $font-size-h2-sm;
+}
+
+h3, .h3 {
+    font-size: $font-size-h3-sm;
+}
+
+h4, .h4 {
+    font-size: $font-size-h4-sm;
+}
+
+h5, .h6 {
+    font-size: $font-size-h5-sm;
+}
+
+h6, .h6 {
+    font-size: $font-size-h6-sm;
+}
+
+ul, ol {
+    padding-left: 45px;
+    margin-top: 0;
+}
+
+a {
+    font-family: $font-family-serif;
+    color: $color-dark;
+    text-decoration: none;
+    font-style: italic;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid transparent;
+    border-bottom: 1px solid #555461;
+    background: none;
+    margin: 30px 0 20px;
+}
+
+
+@media only screen and (min-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1, .h1 {
+        font-size: $font-size-h1;
+    }
+    
+    h2, .h2 {
+        font-size: $font-size-h2;
+    }
+    
+    h3, .h3 {
+        font-size: $font-size-h3;
+    }
+    
+    h4, .h4 {
+        font-size: $font-size-h4;
+    }
+    
+    h5, .h6 {
+        font-size: $font-size-h5;
+    }
+    
+    h6, .h6 {
+        font-size: $font-size-h6;
+    }
+}

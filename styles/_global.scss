@@ -1,0 +1,42 @@
+.toggle {
+    position: fixed;
+    z-index: 10020;
+    top: 10px;
+    right: 10px;
+}
+
+.site-container {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.site-content {
+    flex: 1;
+    display: flex;
+}
+
+.site-footer {
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.search {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.l-header {
+    position: relative;
+    z-index: 10000;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 46px;
+    }
+}
