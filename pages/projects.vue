@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="c-card__header">
-                    <h2 class="c-card__title">Internal Project Name</h2>
+                    <h2 class="c-card__title h4">Internal Project Name</h2>
                     <p class="c-card__subtitle">/ˈproject in phrase form /</p>
                 </div>
 
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="c-card__header">
-                    <h2 class="c-card__title">Internal Project Name</h2>
+                    <h2 class="c-card__title h4">Internal Project Name</h2>
                     <p class="c-card__subtitle">/ˈproject in phrase form /</p>
                 </div>
 
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="c-card__header">
-                    <h2 class="c-card__title">Internal Project Name</h2>
+                    <h2 class="c-card__title h4">Internal Project Name</h2>
                     <p class="c-card__subtitle">/ˈproject in phrase form /</p>
                 </div>
 
@@ -66,6 +66,44 @@
                 <div class="c-card__footer">
                     <a href="#">Read more</a>
                 </div>
+            </div>
+
+            <div class="c-card">
+                <div class="c-card__media">
+                    <img src="//placehold.it/555x230" alt="" />
+                </div>
+
+                <div class="c-card__header">
+                    <h2 class="c-card__title h4">Internal Project Name</h2>
+                    <p class="c-card__subtitle">/ˈproject in phrase form /</p>
+                </div>
+
+                <div class="C-card__content">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                </div>
+
+                <div class="c-card__footer">
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-card">
+            <div class="c-card__media">
+                <img src="//placehold.it/1600x500" alt="" />
+            </div>
+
+            <div class="c-card__header">
+                <h2 class="c-card__title h4">Internal Project Name</h2>
+                <p class="c-card__subtitle">/ˈproject in phrase form /</p>
+            </div>
+
+            <div class="C-card__content">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+
+            <div class="c-card__footer">
+                <a href="#">Read more</a>
             </div>
         </div>
     </div>

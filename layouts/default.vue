@@ -3,17 +3,15 @@
         <header class="site-header l-header">
             <nav role="navigation">
                 <div class="l-header__inner">
-                    <button class="hamburger hamburger--spin menu-button" v-modal="'menu'" :class="{ 'is-active' : isModalOpen }" type="button" aria-label="Menu">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
-
                     <transition name="page" v-on:before-leave="afterPageTransition" v-on:after-enter="enterPageTransition">
                         <nuxt-link to="/" v-if="$route.name !== 'index'">
                             <img src="~/assets/fa-logo-small.png" alt="Freelance Anonymous" />
                         </nuxt-link>
                     </transition>
+
+                    <button class="menu-button" v-modal="'menu'" :class="{ 'is-active' : isModalOpen }" type="button" aria-label="Menu">
+                        Menu <span class="menu-button__icon"></span>
+                    </button>
 
                     <button class="search" v-modal="'search'" type="button" aria-label="Search" v-if="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -34,46 +32,40 @@
                     <ul class="main-nav">
                         <li class="main-nav__item">
                             <nuxt-link to="/team" @click.native="hideModal" class="main-nav__link">
-                                <span class="main-nav__heading">Our Team</span>
-                                <span class="main-nav__desc">Get to know who we are, and let's work together</span>
+                                <span class="main-nav__heading">About</span>
+                                <span class="main-nav__desc">Get to know who we are, and let's work together.</span>
                             </nuxt-link>
                         </li>
 
                         <li class="main-nav__item">
                             <nuxt-link to="/projects" @click.native="hideModal" class="main-nav__link">
-                                <span class="main-nav__heading">Our Projects</span>
-                                <span class="main-nav__desc">Some of our internal projects we are working on</span>
-                            </nuxt-link>
-                        </li>
-
-                        <li class="main-nav__item">
-                            <nuxt-link to="/selected-works" @click.native="hideModal" class="main-nav__link">
-                                <span class="main-nav__heading">Selected Works</span>
-                                <span class="main-nav__desc">Want to see what we have done for others? Here are some, more in person ;)</span>
+                                <span class="main-nav__heading">Our projects</span>
+                                <span class="main-nav__desc">A mix of client and internal projects for your viewing pleasure.</span>
                             </nuxt-link>
                         </li>
 
                         <li class="main-nav__item">
                             <nuxt-link to="/faqs" @click.native="hideModal" class="main-nav__link">
                                 <span class="main-nav__heading">FAQs</span>
-                                <span class="main-nav__desc">Looking to get a simple question answered? Click here</span>
+                                <span class="main-nav__desc">Looking to get a simple question answered? check here.</span>
+                            </nuxt-link>
+                        </li>
+
+                        <li class="main-nav__item">
+                            <nuxt-link to="/selected-works" @click.native="hideModal" class="main-nav__link">
+                                <span class="main-nav__heading">Our write-ups</span>
+                                <span class="main-nav__desc">We also like to write, browse our writings to view topics you find interesting.</span>
                             </nuxt-link>
                         </li>
 
                         <li class="main-nav__item">
                             <nuxt-link to="/connect" @click.native="hideModal" class="main-nav__link">
-                                <span class="main-nav__heading">Let's Connect</span>
+                                <span class="main-nav__heading">Let's connect</span>
                                 <span class="main-nav__desc">Have a project you would like us to take a look at? Interested in joining us?</span>
                             </nuxt-link>
                         </li>
                     </ul>
                 </transition-shape-modal>
-
-                <modal id="search" class="c-modal--search">
-                    <template>
-                        Search <input type="text" placeholder="search goes here">
-                    </template>
-                </modal>
             </nav>
         </header>
 
@@ -153,3 +145,49 @@
         }
     }
 </script>
+
+<style lang="scss">
+    @import "~@/styles/_variables.scss";
+    @import "~@/styles/_mixins.scss";
+
+    @mixin close-icon($color: '#333') {
+        @include background-svg('<svg viewPort="0 0 32 22" version="1.1" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="2" x2="31" y2="2" stroke="' + $color + '" stroke-width="2" /><line x1="1" y1="11" x2="31" y2="11" stroke="' + $color + '" stroke-width="2" /><line x1="1" y1="20" x2="31" y2="20" stroke="' + $color + '" stroke-width="2" /></svg>');
+    }
+
+    .menu-button {
+        font-family: inherit;
+        font-size: $font-size-base;
+        background: none;
+        border: none;
+        padding: 0;
+        color: $color-dark;
+        display: flex;
+        transition: .4s cubic-bezier(.95,.18,.71,.7) all;
+        margin-left: auto;
+        transform-origin: center;
+        align-items: center;
+        z-index: 20000;
+
+        &__icon {
+            @include close-icon();
+            display: inline-block;
+            width: 32px;
+            height: 22px;
+            margin-left: 10px;
+        }
+
+        &.is-active {
+            transform: scale(0);
+        }
+    }
+
+    body.is-dark {
+        .menu-button {
+            color: $color-light;
+
+            &__icon {
+                @include close-icon($color-light);
+            }
+        }
+    }
+</style>

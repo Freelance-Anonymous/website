@@ -1,0 +1,27 @@
+.c-card {
+    margin-bottom: 40px;
+
+    &__header {
+        text-align: center;
+    }
+
+    &__media {
+        margin-bottom: 10px;
+        text-align: center;
+
+        img {
+            line-height: 0;
+            max-width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .c-card {
+        margin-bottom: 60px;
+
+        &__header {
+            text-align: left;
+        }
+    }
+}

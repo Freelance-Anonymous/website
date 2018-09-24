@@ -1,5 +1,6 @@
 $font-family-sans-serif: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif !default;
 $font-family-serif: 'Playfair Display', 'Times New Roman', Times, serif !default;
+$font-size-base: 16px;
 
 $color-light: #fafafa !default;
 $color-dark: #1a1920 !default;
@@ -9,7 +10,7 @@ $font-size-h2: rem-calc(36);
 $font-size-h3: rem-calc(32);
 $font-size-h4: rem-calc(26);
 $font-size-h5: rem-calc(22);
-$font-size-h6: rem-calC(18);
+$font-size-h6: rem-calc(18);
 
 $font-size-h1-sm: rem-calc(44 * .75);
 $font-size-h2-sm: rem-calc(36 * .75);

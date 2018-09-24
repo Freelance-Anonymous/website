@@ -1,4 +1,6 @@
 .p {
+    $this: '.p';
+
     max-width: 1140px;
     margin: 0 auto;
     padding-top: 40px;
@@ -17,12 +19,26 @@
         padding: 0 15px;
         text-align: right;
     }
+
+    &.is-inline {
+        #{$this}__top-content {
+            margin-bottom: 25px;
+        }
+    }
 }
 
 @media only screen and (min-width: 767px) {
     .p {
+        $this: '.p';
+
+        padding-top: 60px;
+
         &__top-content {
             margin-bottom: 75px;
+
+            &.is-inline {
+                margin-bottom: 50px;
+            }
         }
     }
 }

@@ -83,8 +83,10 @@
                 this.setBackdropPosition(contentBackdrop, close);
             },
             setBackdropPosition(backdrop, target) {
-                backdrop.style.top = (target.getBoundingClientRect().top + (target.clientHeight / 2)) + 'px';
-                backdrop.style.left = (target.getBoundingClientRect().left + (target.clientWidth / 2)) + 'px';
+                const targetRect = target.getBoundingClientRect();
+
+                backdrop.style.top = (targetRect.top + (targetRect.height / 2)) + 'px';
+                backdrop.style.left = (targetRect.left + (targetRect.width / 2)) + 'px';
             },
             animateBackdrop(backdrop, close) {
                 const diameterValue = (Math.sqrt(Math.pow(window.innerHeight, 2) + Math.pow(window.innerWidth, 2)) * 2);
@@ -101,20 +103,24 @@
                 backdrop.style.borderRadius = '0';
             },
             resetBackdrop(backdrop, close) {
+                const targetRect = close.getBoundingClientRect();
+
                 backdrop.style.opacity = '';
                 backdrop.style.transition = '';
                 backdrop.style.transform = '';
                 backdrop.style.height = '';
                 backdrop.style.width = '';
                 backdrop.style.borderRadius = '5px';
-                backdrop.style.top = (close.getBoundingClientRect().top + (close.clientHeight / 2)) + 'px';
-                backdrop.style.left = (close.getBoundingClientRect().left + (close.clientWidth / 2)) + 'px';
+                backdrop.style.top = (targetRect.top + (targetRect.height / 2)) + 'px';
+                backdrop.style.left = (targetRect.left + (targetRect.width / 2)) + 'px';
             }
         }
     }
 </script>
 
 <style lang="scss">
+    @import "~@/styles/_variables.scss";
+
     .c-modal {
         $this: &;
 
@@ -143,6 +149,10 @@
                 right: auto;
                 bottom: auto;
                 border-radius: 5px;
+            }
+
+            #{$this}__close {
+                color: $color-light;
             }
         }
     }

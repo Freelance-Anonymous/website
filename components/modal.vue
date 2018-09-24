@@ -15,15 +15,19 @@
             <div class="c-modal__wrapper">
                 <div class="c-modal__container">
                     <div class="c-modal__content">
-                        <button class="c-modal__close hamburger hamburger--spin" 
+                        <button class="c-modal__close" 
                                 :class="{ 'is-active' : isOpen }" 
                                 type="button" 
                                 aria-label="Close" 
                                 @click="closeLocalModal"
                                 v-if="showClose">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
+
+                            Close
+
+                            <svg class="c-modal__close-icon" width="22" height="22" viewPort="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="1" y1="21" x2="21" y2="1" stroke="#fafafa" stroke-width="2" />
+                                <line x1="1" y1="1" x2="21" y2="21" stroke="#fafafa" stroke-width="2" />
+                            </svg>
                         </button>
 
                         <slot :closeModal="closeLocalModal"></slot>
@@ -240,6 +244,15 @@
             right: 0;
             bottom: 0;
             z-index: 10000;
+        }
+
+        &__close {
+            display: flex;
+            align-items: center
+        }
+
+        &__close-icon {
+            padding-left: 10px;
         }
     }
 
